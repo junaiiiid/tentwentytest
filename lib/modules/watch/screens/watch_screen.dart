@@ -32,6 +32,7 @@ import 'package:go_router/go_router.dart';
 import 'package:tentwenty_test/constants/api_constants.dart';
 import 'package:tentwenty_test/constants/app_colors.dart';
 import 'package:tentwenty_test/constants/app_text_styles.dart';
+import 'package:tentwenty_test/constants/my_strings.dart';
 import 'package:tentwenty_test/modules/home/widgets/search_bar.dart';
 import 'package:tentwenty_test/modules/watch/models/popular_movies_model.dart';
 import 'package:tentwenty_test/modules/watch/view_models/watch_view_model.dart';
@@ -95,7 +96,7 @@ class _WatchScreenState extends ConsumerState<WatchScreen> {
           : ListView(
               children: [
                 Text(
-                  "Top Results",
+                  MyStrings.getString.topResults,
                   style: AppTextStyles.bodyText.copyWith(fontSize: 10.sp),
                 ),
                 Divider(

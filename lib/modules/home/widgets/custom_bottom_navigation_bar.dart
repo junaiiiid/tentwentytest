@@ -27,6 +27,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Project imports:
 import 'package:tentwenty_test/constants/app_colors.dart';
 import 'package:tentwenty_test/constants/app_text_styles.dart';
+import 'package:tentwenty_test/constants/my_strings.dart';
 import 'package:tentwenty_test/modules/home/view_models/home_view_model.dart';
 import 'package:tentwenty_test/services/provider_service.dart';
 
@@ -59,16 +60,16 @@ class CustomBottomNavigationBar extends ConsumerWidget {
     switch (item) {
       case NavBarItems.dashboard:
         iconData = Icons.menu;
-        itemName = "Dashboard";
+        itemName = MyStrings.getString.dashboard;
       case NavBarItems.watch:
         iconData = Icons.play_circle_rounded;
-        itemName = "Watch";
+        itemName = MyStrings.getString.watch;
       case NavBarItems.mediaLibrary:
         iconData = Icons.library_books_rounded;
-        itemName = "Media Library";
+        itemName = MyStrings.getString.mediaLibrary;
       case NavBarItems.more:
         iconData = Icons.menu;
-        itemName = "More";
+        itemName = MyStrings.getString.more;
     }
     return InkWell(
       onTap: onTap,

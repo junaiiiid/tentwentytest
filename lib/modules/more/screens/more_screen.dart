@@ -20,13 +20,16 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
+import 'package:tentwenty_test/constants/my_strings.dart';
+
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("More Screen"),
+    return Center(
+      child: Text(MyStrings.getString.moreScreen),
     );
   }
 }

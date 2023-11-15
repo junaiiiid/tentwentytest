@@ -33,6 +33,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:tentwenty_test/constants/api_constants.dart';
 import 'package:tentwenty_test/constants/app_colors.dart';
 import 'package:tentwenty_test/constants/app_text_styles.dart';
+import 'package:tentwenty_test/constants/my_strings.dart';
 import 'package:tentwenty_test/modules/home/widgets/responsive_scaffold.dart';
 import 'package:tentwenty_test/modules/watch/models/popular_movies_model.dart';
 import 'package:tentwenty_test/services/route_service.dart';
@@ -84,7 +85,7 @@ class MovieDetailsScreen extends StatelessWidget {
                           width: 10.w,
                         ),
                         Text(
-                          "Watch",
+                          MyStrings.getString.watch,
                           style: AppTextStyles.h6Text.copyWith(
                               color: AppColors.pureWhite,
                               fontWeight: FontWeight.w300),
@@ -101,7 +102,7 @@ class MovieDetailsScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
-                          "In theaters december 22, 2021",
+                          MyStrings.getString.inTheatersDecember222021,
                           style: AppTextStyles.h6Text.copyWith(
                               color: AppColors.pureWhite,
                               fontWeight: FontWeight.w300),
@@ -128,7 +129,7 @@ class MovieDetailsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Genres",
+                    MyStrings.getString.genres,
                     style: AppTextStyles.h6Text
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
@@ -140,7 +141,7 @@ class MovieDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Overview",
+                    MyStrings.getString.overview,
                     style: AppTextStyles.h6Text
                         .copyWith(fontWeight: FontWeight.w500),
                   ),

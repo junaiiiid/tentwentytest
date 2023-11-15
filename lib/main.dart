@@ -25,6 +25,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Project imports:
+import 'package:tentwenty_test/generated/l10n.dart';
 import 'package:tentwenty_test/services/route_service.dart';
 
 void main() {
@@ -40,6 +41,10 @@ class Start extends StatelessWidget {
         designSize: const Size(430, 932),
         builder: (_, child) {
           return MaterialApp.router(
+            localizationsDelegates: const [
+              S.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
             debugShowCheckedModeBanner: false,
             routerConfig: RouteService.router,
           );

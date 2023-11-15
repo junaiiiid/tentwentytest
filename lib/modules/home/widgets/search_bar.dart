@@ -27,6 +27,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Project imports:
 import 'package:tentwenty_test/constants/app_colors.dart';
 import 'package:tentwenty_test/constants/app_text_styles.dart';
+import 'package:tentwenty_test/constants/my_strings.dart';
 import 'package:tentwenty_test/modules/watch/view_models/watch_view_model.dart';
 import 'package:tentwenty_test/services/provider_service.dart';
 import 'package:tentwenty_test/services/state_service.dart';
@@ -58,12 +59,12 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
                   changeSearchState();
                 });
               },
-              hintText: "TV shows, movies and more")
+              hintText: MyStrings.getString.tvShowsMoviesAndMore)
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Watch",
+                  MyStrings.getString.watch,
                   style: AppTextStyles.h6Text
                       .copyWith(fontWeight: FontWeight.normal),
                 ),
