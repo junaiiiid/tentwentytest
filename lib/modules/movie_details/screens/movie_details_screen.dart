@@ -27,6 +27,8 @@ import 'package:flutter/material.dart';
 // Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:tentwenty_test/services/provider_service.dart';
+import 'package:tentwenty_test/services/state_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // Project imports:
@@ -111,8 +113,8 @@ class MovieDetailsScreen extends StatelessWidget {
                             text: "Get Tickets", onTap: () {}),
                         Buttons.customBorderButton(
                             text: "Watch Trailer",
-                            onTap: () async{
-                             await _launchUrl();
+                            onTap: () async {
+                              await _launchUrl();
                             }),
                         SizedBox(
                           height: 20.h,
@@ -133,7 +135,12 @@ class MovieDetailsScreen extends StatelessWidget {
                     style: AppTextStyles.h6Text
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
-                  getGenreElements(genreName: "Science"),
+                  SizedBox(
+                    height: 50.h,
+                    child: Row(
+                      children: getGenres().map<Widget>((e) => getGenreElements(genreName: e)).toList(),
+                    ),
+                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 20.h),
                     child: Divider(
@@ -166,6 +173,21 @@ class MovieDetailsScreen extends StatelessWidget {
     if (!await launchUrl(Uri.parse(url))) {
       throw Exception('Could not launch url');
     }
+  }
+
+  List<String> getGenres() {
+    final state = StateService.context.read(ProviderService.watchProvider);
+    List<String> genres = [];
+    if (result.genreIds.isNotEmpty) {
+      for (var element in state.genreModel.genres) {
+        for (var element2 in result.genreIds) {
+          if (element.id == element2) {
+            genres.add(element.name);
+          }
+        }
+      }
+    }
+    return genres;
   }
 
   Widget getGenreElements({required String genreName}) {
