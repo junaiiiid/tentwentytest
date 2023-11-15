@@ -29,7 +29,6 @@ import 'package:tentwenty_test/constants/app_colors.dart';
 import 'package:tentwenty_test/constants/app_text_styles.dart';
 import 'package:tentwenty_test/modules/home/view_models/home_view_model.dart';
 import 'package:tentwenty_test/services/provider_service.dart';
-import 'package:tentwenty_test/services/state_service.dart';
 
 class CustomBottomNavigationBar extends ConsumerWidget {
   const CustomBottomNavigationBar({super.key});

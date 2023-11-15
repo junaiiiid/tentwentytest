@@ -36,7 +36,6 @@ import 'package:tentwenty_test/constants/app_text_styles.dart';
 import 'package:tentwenty_test/modules/home/widgets/responsive_scaffold.dart';
 import 'package:tentwenty_test/modules/watch/models/popular_movies_model.dart';
 import 'package:tentwenty_test/services/route_service.dart';
-import 'package:tentwenty_test/services/state_service.dart';
 import 'package:tentwenty_test/widgets/buttons.dart';
 
 class MovieDetailsScreen extends StatelessWidget {

@@ -28,7 +28,6 @@ import 'package:tentwenty_test/modules/dashboard/screens/dashboard_screen.dart';
 import 'package:tentwenty_test/modules/home/view_models/home_view_model.dart';
 import 'package:tentwenty_test/modules/home/widgets/custom_bottom_navigation_bar.dart';
 import 'package:tentwenty_test/modules/home/widgets/responsive_scaffold.dart';
-import 'package:tentwenty_test/modules/home/widgets/search_bar.dart';
 import 'package:tentwenty_test/modules/media_library/screens/media_library_screen.dart';
 import 'package:tentwenty_test/modules/more/screens/more_screen.dart';
 import 'package:tentwenty_test/modules/watch/screens/watch_screen.dart';

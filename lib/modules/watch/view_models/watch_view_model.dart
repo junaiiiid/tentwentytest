@@ -27,7 +27,6 @@ import 'package:tentwenty_test/modules/watch/models/backdrop_model.dart';
 import 'package:tentwenty_test/modules/watch/models/genre_model.dart';
 import 'package:tentwenty_test/modules/watch/models/popular_movies_model.dart';
 import 'package:tentwenty_test/services/api_service.dart';
-import 'package:tentwenty_test/services/logger_service.dart';
 
 class WatchViewModel extends BaseViewModel {
   SearchBarState _searchBarState = SearchBarState.inActive;
